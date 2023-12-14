@@ -36,28 +36,18 @@ plugins:
   - serverless-openapi-documenter
 
 functions:
-  getHelloWord:
+  createDatabase:
     handler: app.handler
-    name: "${self:service}-${self:custom.stage}-get-hello-world"
+    name: "${self:service}-${self:custom.stage}-get-create-db"
     package:
       patterns:
         - "app.js"
     events:
       - http:
-          path: /hello-world/
+          path: /create-db/
           method: get
           cors: true
-  postHelloWord:
-    handler: app.handler
-    name: "${self:service}-${self:custom.stage}-post-hello-world"
-    package:
-      patterns:
-        - "app.js"
-    events:
       - http:
-          path: /hello-world/
+          path: /create-db/
           method: post
           cors: true
-          request:
-            schemas:
-              application/json: post-hello-model

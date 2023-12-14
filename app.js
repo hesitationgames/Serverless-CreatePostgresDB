@@ -9,18 +9,15 @@ module.exports.handler = async (event) => {
     'Access-Control-Allow-Credentials': true,
   };
 
-  const now = new Date();
-  const hora = now.toLocaleTimeString();
-  const fecha = now.toLocaleDateString();
 
-  // Construye el mensaje con la hora y la fecha actual.
-  const message = `Hola, mundo, son las ${hora} de ${fecha}`;
-  const description = 'Esta es la descripcion de esta app: This is a api that creates postgres databases for backstage templates'
+  // Agrega un retraso de 5 segundos usando setTimeout y await
+  await new Promise(resolve => setTimeout(resolve, 5000));
 
-  // Para otras solicitudes, respondemos con los encabezados CORS y el cuerpo de la respuesta.
+  const message = `Nice bro`;
+
   return {
     statusCode: 200,
     headers: responseHeaders,
-    body: JSON.stringify({ message, description }),
+    body: JSON.stringify({ message }),
   };
 };
