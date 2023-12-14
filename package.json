@@ -1,0 +1,19 @@
+{
+    "name": "serverless-createpostgresdb",
+    "version": "1.0.0",
+    "description": "This is a api that creates postgres databases for backstage templates",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"No test specified\" "
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "serverless": "3.2.0"
+    },
+    "dependencies": {
+        "serverless-offline": "^13.2.0",
+        "serverless-openapi-documenter": "^0.0.90"
+    }
+}
